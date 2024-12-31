@@ -1,0 +1,325 @@
+/*
+  STYLE GUIDE STYLING 
+  Default styling for the style guide 
+*/
+
+/* https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file */
+/* H1 FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+
+/* H2 & BODY FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* H3 FONT */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ARTIST HOVER FONT */
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Playpen+Sans:wght@100..800&display=swap');
+
+
+body {
+    font-family: "Poppins","Open Sans", sans-serif;
+    /* padding: 2rem; */
+    background-color: rgb(242, 233, 241);
+  }
+  
+  .element {
+    padding-bottom: 2rem;
+    margin-top: 6rem;
+  }
+
+  h1{
+    font-family: "Playwrite DE Grund", sans-serif;
+  }
+  
+  h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 550;  
+    Color: #4aa40d;
+  }
+  
+  h3 {
+    font-family: "Raleway", sans-serif;
+    Color: #111111;
+
+    font-weight: 500;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  
+  h4 {
+    margin-bottom: 0.8rem;
+  }
+
+
+  
+  nav a:hover, nav a:focus {
+    text-decoration: none;
+  }
+  
+  
+  .nav-button{
+    box-sizing: border-box; 
+    color: white;
+    color: #111111;
+    display: inline-block;
+    text-decoration: none;
+    padding: .8rem ;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    width: 50%;
+  }
+
+  .nav-button:focus, .nav-button:hover {
+    background-color: rgb(228, 200, 161, 0.5);
+    transform:scale(1.02);
+    
+  }
+
+  nav {
+    padding: .8rem;
+  }
+
+  ul{
+    list-style-type: none;
+    margin-bottom: 3rem;
+
+  }
+
+  #product_description{
+    margin-bottom: 5rem;
+  }
+
+  
+  /* 
+    INTERACTIVE ELEMENTS -------------------
+  */
+
+  /*<input> and <label> styling (from css tutorial codepen & https://web.dev/learn/forms/styling/*/
+  label{
+    margin-bottom: .5rem;
+    display: block;
+  }
+
+  input{
+    padding: 0.4rem;
+    width: 40%;
+    border: .1rem #F49CBB solid;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+  }
+
+  textarea{
+    padding: 0.4rem;
+    width: 81%;
+    border: .1rem #F49CBB solid;
+    margin-bottom: 1rem;
+    border-radius: .4rem;
+  }
+
+  input:hover, input:focus, textarea:hover, textarea:focus{
+    border:.1rem solid;
+  }
+
+  button{
+    margin-top: 1rem;
+    width: 8rem;
+    background:#e4c8a1;
+    padding: .7rem;
+    border:none;
+    border-radius: 2rem;
+  }
+
+  button:hover{
+    background:#bda686;
+    transition-duration: 0.5s;
+  } 
+
+  
+  /* IN-TEXT LINK EFFECT*/
+  a:hover, a:focus {
+    color:#346433;
+    text-decoration: underline;
+    transition-property: background-color;
+    transition: .5s;
+
+  }
+
+  a{
+    font-family: "Raleway", sans-serif;
+    color:#3DA43B;
+    text-decoration: none;
+    position: relative;
+  }
+
+  /* IMAGE AS A LINK HOVER EFFECT (from https://www.w3schools.com/howto/howto_css_image_overlay.asp) */
+  .container{
+    position:relative;
+    width: 30%;
+  }
+
+  .container{
+    max-width: 100%;
+    width: auto;
+  }
+
+  .overlay{
+    display: grid;
+    background-color: #F49CBB;
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: 20%;
+    width: 100%;
+    padding-top:9rem;
+    padding-bottom:9rem;
+    left: 0;
+    text-align: center;
+    border-radius: 1rem;
+
+  }
+
+  .img-text{
+    font-family: "Jua";
+    opacity: 1;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .img-artist{
+    opacity: 1;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .container:hover .overlay{
+    opacity: 1;
+  }
+
+  a:focus .overlay{
+    opacity: 1;
+  }
+
+
+  /* 
+    TEXT ELEMENTS -------------------
+  */
+  p, ol, ul{
+    max-width: 80%;
+  }
+
+  /* Headings section (from CSS tutorial) */
+  .headings {
+    text-decoration: none;
+    border-bottom: none;
+    display:inline-block;
+    border: #F49CBB solid;
+    border-radius: 1rem;
+
+    padding: .8rem;
+    transition: transform .5s;
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .headings{
+    color: #111111;
+  }
+
+  
+  
+  /* 
+    COMBINED ELEMENTS -------------------
+  */
+
+  /* from IAT 235 */
+  /* NAV-BAR STYLING */
+  .button-nav{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display:inline-block;
+    padding: 3rem 2rem;
+  }
+
+  .button-nav:hover, .button-nav:focus {
+    text-decoration: underline;
+    transition-duration: .5s;
+  }
+
+  /* SERVICE LISTING STYLING */
+  img{
+   border-radius: 1rem;
+   display: inline-block;
+   max-width: 100%;
+   height: auto;
+
+  }
+  
+
+  .button-book{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: 8rem;
+    background: #e4c8a1;
+    padding: .8rem;
+    border:none;
+    border-radius: 2rem;
+    color: #111111;
+    font-size: 1rem;
+    display:inline-block;
+  }
+
+  .button-book:hover,  .button-book:focus{
+    background:#bda686;
+    transition-duration: 0.5s;
+    color: #111111;
+    text-decoration: none;
+  }
+
+  .service p{
+      margin-left: 1.5rem;
+  }
+
+
+  .listing {
+    /* display: grid;   */
+    padding: 2rem; 
+    width: 24rem;
+    row-gap: 2rem;
+    column-gap: 2rem;     
+    padding: 1rem;  
+    
+}
+
+.service {
+    align-items: center; 
+    text-align: center; 
+    background: white;
+    border: #F49CBB solid;
+    border-radius: 1rem;
+    padding: 1rem; 
+    width: 20rem;
+    height:auto;
+    transition: 0.5s;
+}
+
+.serivce img{
+  border-radius: 1rem;
+  width: 100%; 
+  height: auto;
+}
+
+
+
+
+.service:hover{
+  transform:scale(1.01);
+}
+
+/* FROM WEEK 4 LECTURE SLIDES */
+/* CITATIONS */
+a.long-url {
+  word-break: break-word;
+  }

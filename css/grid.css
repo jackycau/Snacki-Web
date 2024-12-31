@@ -1,0 +1,244 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: 26rem auto;
+    margin: 2rem;
+}
+
+/* side navigation bar (https://www.youtube.com/watch?v=alsxCvrbeko)*/
+.sidenav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.sidenav h2{
+    margin-left: 3rem;
+}
+
+/* column position (https://css-tricks.com/snippets/css/complete-guide-grid/) */
+.main{
+    grid-column-start: 2;
+}
+
+
+.input-resize {
+    display: flex;
+}
+
+/* banner elements (layout tutorial)*/
+.logo {
+    grid-column-start: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    padding-top: 3rem;
+  }
+
+h1 {
+padding-top: 2rem;
+ 
+}
+
+.logo_description{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_description h1 {
+    padding-bottom: 2rem;
+    margin-left: 4rem;
+
+}
+
+.logo_description p {
+    max-width: 70%; 
+    margin-left: 4rem;
+
+}
+
+.banner-grid{
+    background-color: #F49CBB;
+    width: 100%;
+    display: grid;
+  }
+
+
+/* center logo image (https://www.w3schools.com/cssref/css3_pr_justify-content.php) */
+.banner-logo{  
+    display: flex;  
+    justify-content: center;
+}
+
+.colour-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.imagery-direction{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr ;
+    row-gap: 2rem;
+    column-gap: 2rem;
+
+}
+
+.fonts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* side by side elements (Layout tutorial)*/
+.flex-elements {
+    display: flex; 
+    margin: 2rem 0; 
+}
+
+
+#text_link, #input {
+    flex: 1rem; 
+    margin-right: 0; 
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-bar img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+/* service listing */
+.listing {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* grid column positioning (Layout tutorial) */
+@media (max-width: 20rem){
+
+    .grid-column{
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-column-start: 1;
+    } 
+}
+
+
+/* text elements stacking(Layout tutorial & https://css-tricks.com/snippets/css/complete-guide-grid/) */
+@media (max-width: 74.6rem) { 
+    .flex-elements {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    #input, #mailing_list {
+        width: 100%; 
+        margin: 1rem;
+    }
+}
+
+
+@media (max-width: 74.6rem){
+
+    .colour-grid{
+        grid-template-columns: 1fr 1fr;
+        column-gap: .5rem;
+        row-gap: 2rem;
+    }
+}
+
+
+@media (max-width: 74.6rem){
+
+    .banner-grid, .banner-logo, .logo_description{
+        width: 100%;
+        grid-column-start: 1;
+
+      }
+}
+
+/* side nav responsive */
+@media (max-width: 56rem) {
+    .sidenav, .grid-column{
+        padding: 0.5rem; 
+        width: 100%;
+        
+    }
+}
+
+
+@media (max-width: 56rem) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 56rem) {
+    .sidenav {
+        width: 100%; 
+        padding: 1rem; 
+        grid-column-start: 1; 
+    }
+}
+
+@media (max-width: 56rem) {
+    .main {
+        grid-column-start: 1; 
+        padding: 1rem;
+    }
+}
+
+/* service listing resize */
+@media (max-width: 56rem) {
+    .listing {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+/* art direction and colour palette responsiveness */
+@media (max-width: 20rem) {
+    .colour-grid, .imagery-direction{
+        grid-template-columns: 1fr; 
+    }
+} 
+
+
+/* company description responsiveness */
+@media (max-width: 20rem) {
+
+    .logo_description {
+        max-width: 100%; 
+        grid-template-columns: 1fr;
+    }
+}
+
+/* main nav design stacking(Layout tutorial & https://css-tricks.com/snippets/css/complete-guide-grid/) */
+@media (max-width: 20rem) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 20rem) {
+    .button-nav {
+        padding: 1rem;
+        text-align: center;
+    }
+}
+
